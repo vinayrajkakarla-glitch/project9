@@ -1,0 +1,118 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  font-family: system-ui, sans-serif;
+}
+
+
+.outer-box {
+  padding: 40px;
+  border-radius: 24px;
+  background: #1e293b;          
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inner-box {
+  padding: 32px;
+  border-radius: 18px;
+  background: #020617;          /* inner normal */
+  transition: background 0.3s ease;
+  color: rgb(255, 255, 255);
+  align-content: center;
+}
+
+
+/* Outer hover */
+.outer-box:hover {
+  background: #1e293b; /* keep outer normal on hover to avoid glow */
+  box-shadow: none; /* remove glow */
+  padding: 40px; /* restore original padding */
+}
+
+/* Inner hover */
+.inner-box:hover {
+  background: #020617; /* keep inner normal on hover */
+  color: rgb(255, 255, 255);
+  text-shadow: none;
+  padding: 32px; 
+}
+
+
+
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-container h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.inner-box :has(.form-container :hover) {
+  color: #020617;
+}
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0f172a;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e5e7eb;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* SHOW / HIDE */
+.toggle {
+  font-size: 12px;
+  color: #60a5fa;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* TEXT */
+.form-container p {
+  font-size: 13px;
+  color: #feffff;
+}
+
+.form-container label {
+  color: #60a5fa;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+
+button {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+button:hover {
+  background: #4f46e5;
+}
